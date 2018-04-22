@@ -1,12 +1,12 @@
-package com.framework.annotation;
+package com.lee.aop.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target(ElementType.TYPE)
+@Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Except {
-    String[] value() default "";
+public @interface Transaction {
+    String value() default "";
 }
